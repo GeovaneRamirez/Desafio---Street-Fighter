@@ -25,8 +25,7 @@ int main()
         scanf("%d", &golpe);
         if (golpe > 0) {
             vezDoJogador = 1;
-    }
-        else if (golpe < 0) {
+    } else if (golpe < 0) {
             vezDoJogador = 2;
             golpe = golpe * (-1);
     }
@@ -40,13 +39,11 @@ int main()
                 soma = soma + a;
                 if (soma < golpe) {
                     continue;
-                }
-                else if (soma == golpe) {
+                } else if (soma == golpe) {
                     golpe = golpe * 3;
                     bonus = 1;
                     break;
-                }
-                else {
+                } else {
                     break;
                 }
             }
@@ -59,14 +56,11 @@ int main()
                 soma += i;
                 if (soma < golpe) {
                     continue;
-                } else if (soma == golpe)
-                {
+                } else if (soma == golpe) {
                     // Se o número for triangular
                     golpe = golpe * 2;
                     break;
-                }
-                else
-                {
+                } else {
                     // O numero não é triangular
                     break;
                 }
@@ -76,8 +70,7 @@ int main()
         // verificação de quem foi o golpe e adiciona os pontos para ele
         if (vezDoJogador == 1) {
             pontosRyu = pontosRyu + golpe;
-        }
-        else {
+        } else {
             pontosKen = pontosKen + golpe;
         }
     }
@@ -85,13 +78,9 @@ int main()
     // Informar o ganhador da luta
     if (pontosRyu > pontosKen) {
         printf("Ryu ganhou\n");
-    }
-    else if (pontosKen > pontosRyu)
-    {
+    } else if (pontosKen > pontosRyu) {
         printf("Ken ganhou\n");
-    }
-    else
-    {
+    } else {
         printf("Empate\n");
     }
 
